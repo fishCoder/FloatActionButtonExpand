@@ -14,7 +14,7 @@
 
 ##How to use
 
-###constructor
+###Constructor
 
 ```
 
@@ -22,29 +22,36 @@ FABBaseDialog(Context context, View fab, int resId)
 
 FABBaseDialog(Context context, View fab, View toolbar)
 
-```
-###show dismiss
 
 ```
+###Show dismiss
 
-showAsToolBar()
+```
 
-showAsDialog()
+void showAsToolBar()
 
-dismiss()
+void showAsDialog()
+
+void dismiss()
+
 
 ```
 
 ###ClickListener
 
 ```
+
 void setOnClickListener(int viewId,View.OnClickListener listener)
+
 void setOnClickListener(int[] viewIds,View.OnClickListener listener)
-```
 
-##useages
 
 ```
+
+##Useages
+
+```
+
 FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 fabBaseDialog = new FABBaseDialog(this,fab,R.layout.toolbar);
 fabBaseDialog.setOnClickListener(R.id.image, new View.OnClickListener() {
@@ -57,10 +64,17 @@ fabBaseDialog.setOnClickListener(R.id.image, new View.OnClickListener() {
 ... ...
         
 fabBaseDialog.showAsToolBar();
+
 ```
 
 
-##dependencies
+##Dependencies
 
 ```
+compile 'com.daijia.android:library:1.0.1'
 ```
+
+##License
+
+[The MIT License (MIT)
+](https://opensource.org/licenses/mit-license.php)
